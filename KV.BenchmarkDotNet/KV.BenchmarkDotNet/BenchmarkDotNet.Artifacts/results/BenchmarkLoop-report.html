@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkLoop</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.9, OS=Windows 10 Redstone 2 (10.0.15063)
+Processor=Intel Core i7-7500U CPU 2.70GHz (Kaby Lake), ProcessorCount=4
+Frequency=2835938 Hz, Resolution=352.6170 ns, Timer=TSC
+.NET Core SDK=1.0.4
+  [Host]     : .NET Core 1.1.2 (Framework 4.6.25211.01), 64bit RyuJIT DEBUG  [AttachedDebugger]
+  DefaultJob : .NET Core 1.1.2 (Framework 4.6.25211.01), 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>         Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>GenerateDataWithFor</td><td>351.6 ms</td><td>4.391 ms</td><td>3.667 ms</td>
+</tr><tr><td>GenerateDataWithWhile</td><td>366.1 ms</td><td>7.050 ms</td><td>8.393 ms</td>
+</tr></tbody></table>
+</body>
+</html>
